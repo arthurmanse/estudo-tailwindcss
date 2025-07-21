@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="./dist/output.css" rel="stylesheet">
+  <title>Tailwind CSS</title>
+</head>
+<body>
+
+<!-- 
+npx tailwindcss -i ./input.css -o ./dist/output.css --watch 
+-->
+
+  <header class="bg-gray-800 text-white p-4 mx-auto">
+    <nav class="flex justify-between">
+      <ul class="flex space-x-4 gap-4">
+        <li><a href="#" class="text-white hover:underline">Início</a></li>
+        <li><a href="#" class="text-white hover:underline">Sobre</a></li>
+        <li><a href="#" class="text-white hover:underline">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="bg-blue-950 text-white p-4">
+    <h1 class="text-2xl font-bold">Bem-vindo ao Tailwind CSS</h1>
+    <p class="mt-2">Este é um exemplo de uso do Tailwind CSS.</p>
+  </div>
+
+  <div class="container mx-auto mt-8">
+    <button class="bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">
+      Clique aqui
+    </button>
+  </div>
+
+  <section class="px-6 m-8 ">
+      <h1 class="text-4xl font-medium py-4 border-y-2 border-gray-300">Curriculum</h1>
+      <h2 class="text-2xl font-normal mt-6 py-4">Habilidades:</h2>
+      <ul class="text-xl">
+        <li class="bg-gray-200 w-70 h-10 border-l-4 border-purple-600 pl-8 py-1.5 my-2">HTML</li>
+        <li class="bg-gray-200 w-70 h-10 border-l-4 border-purple-600 pl-8 py-1.5 my-2">CSS</li>
+        <li class="bg-gray-200 w-70 h-10 border-l-4 border-purple-600 pl-8 py-1.5 my-2">JavaScript</li>
+      </ul>
+  </section>
+
+  <section class="px-6 mx-8 my-12">
+    <div class="grid grid-cols-3 gap-4 *:bg-gray-200 *:py-4 *:px-8 *:border-l-4 *:border-purple-600 text-xl">
+      <div class="col-span-full">Item</div>
+      <div class="col-span-2 row-span-2">Item</div>
+      <div>Item</div>
+      <div>Item</div>
+    </div>
+  </section>
+
+  <section class="px-6 mx-8 my-12 grid gap-12">
+    <hr>
+    <h1 class="font-bold text-3xl">Grid 2</h1>
+    <header class="grid grid-cols-[1fr_auto]">
+      <a href="">Home</a>
+      <ul class="grid grid-cols-2 gap-4">
+        <li>About</li>
+        <li>Contacts</li>
+      </ul>
+    </header>
+    <div class="grid grid-cols-3 gap-8">
+      <h1>Produtos de alta qualidade</h2>
+      <p class="col-span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae assumenda voluptates beatae distinctio ut vero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolore officia illo totam similique. Ipsum inventore dolore cum repellat, similique a voluptas, natus error aspernatur assumenda laboriosam provident tenetur aperiam.</p>
+    </div>
+    <div class="grid *:w-90 *:h-110 grid-cols-1 gap-4 place-items-center md:grid-cols-3">
+      <div class="bg-amber-200"></div>
+      <div class="bg-blue-300"></div>
+      <div class="bg-red-400"></div>
+    </div>
+  </section>
+
+  <section class="m-8">
+    <hr>
+    <h1 class="my-4 font-bold text-3xl">Posicionamento</h1>
+    <div class="relative size-32 bg-gray-400 mx-50 my-20">
+      <div class="absolute right-0 bottom-0 size-16 bg-blue-300"></div>
+    </div>
+  </section>
+
+  <section class="m-8">
+    <hr>
+    <h1 class="my-4 font-bold text-3xl">Flexbox</h1>
+    <ul class="flex flex-wrap *:flex-auto gap-6 *:p-4 *:rounded-2xl *:text-center *:font-bold *:text-white">
+      <li class="bg-amber-300">HTML</li>
+      <li class="bg-blue-300">CSS</li>
+      <li class="bg-orange-400">JavaScript</li>
+      <li class="bg-blue-500">React</li>
+      <li class="bg-green-400">Tailwind</li>
+      <li class="bg-red-400">Git</li>
+    </ul>
+  </section>
+
+  <section class="m-8">
+    <hr>
+    <h1 class="my-4 font-bold text-3xl">Alinhamento</h1>
+
+    <div class="flex justify-around flex-wrap gap-4 h-80">
+
+      <div class="bg-blue-500 text-white p-8 rounded-xl flex flex-col justify-between">
+        <div>
+          <h2 class="font-bold text-2xl mb-4">Plano Premium</h2>
+          <hr class="mb-4">
+          <ul class="list-disc px-4">
+            <li>Mais de 300 Acessos</li>
+            <li>Suporte Vitálicio</li>
+            <li>Acesso Completo</li>
+            <li>R$ 299,00</li>
+          </ul>
+        </div>
+        <button class="bg-white text-black rounded-2xl mt-4 px-3 py-1 font-semibold hover:bg-gray-200 hover:cursor-pointer">Assinar Premium</button>
+      </div>
+
+      <div class="bg-gray-500 text-white p-8 rounded-xl flex flex-col justify-between">
+        <div>
+          <h2 class="font-bold text-2xl mb-4">Plano Básico</h2>
+          <hr class="mb-4">
+          <ul class="list-disc px-4">
+            <li>Até de 300 Acessos</li>
+            <li>Suporte por até 1 Ano</li>
+            <li class="font-bold">R$ 99,00</li>
+          </ul>
+        </div>
+        <button class="bg-white text-black rounded-2xl mt-4 px-3 py-1 font-semibold hover:bg-gray-200 hover:cursor-pointer">
+          Assinar Básico
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="flex *:size-50 flex-wrap gap-8 justify-around m-8 my-20">
+    <div class="bg-amber-200"></div>
+    <div class="bg-blue-300"></div>
+    <div class="bg-red-400"></div>
+  </div>
+
+  <hr class="mt-20">
+
+  <section class="m-8 bg-lime-950 p-8 flex flex-col">
+    <header class="text-lime-300 text-center p-4 tracking-widest max-sm:text-xs">CONECTE-SE COM A NATUREZA</header>
+
+    <h1 class="text-gray-100 text-7xl font-serif align-middle px-10 text-center mb-6 max-sm:text-3xl">Cada Som, Cada Momento, Uma Nova Descoberta</h1>
+
+    <hr class="text-white m-auto max-w-3xs min-w-xs max-sm:hidden">
+
+    <div class="flex flex-row flex-wrap my-8 mx-8 justify-around gap-4 *:max-w-lg ">
+
+      <div class="bg-[#2D4815] border-gray-100 border-1 rounded-2xl p-6 mb-6 w-100 max-w-xs max-lg:w-80 max-sm:w-60">
+
+        <h1 class="text-lime-300 text-2xl font-serif">Lua Nova</h1>
+
+        <h2 class="text-gray-100 text-xl leading-10 "><span class="text-5xl font-serif">23</span><br>Março 2026</h2>
+
+        <p class="text-lime-300 text-left my-4 text-balance">Melhor período para observação astronômica. O céu estará claro e as estrelas visíveis</p>
+
+        <button class="bg-lime-950 text-gray-100 py-2 px-4 rounded-full font-semibold hover:bg-gray-100 hover:text-lime-950 hover:cursor-pointer">Reservar 23/03</button>
+
+      </div >
+
+      <div class="bg-[#2D4815] border-gray-100 border-1 rounded-2xl p-6 mb-6 w-100 max-w-xs max-lg:w-80 max-sm:w-60">
+
+        <h1 class="text-lime-300 text-2xl font-serif">Aurora Boreal</h1>
+
+        <h2 class="text-gray-100 text-xl leading-10"><span class="text-5xl font-serif">15</span><br>Abril 2026</h2>
+
+        <p class="text-lime-300 text-left my-4 text-balance">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
+
+        <button class="bg-lime-950 text-gray-100 py-2 px-4 rounded-full font-semibold hover:bg-gray-100 hover:text-lime-950 hover:cursor-pointer">Reservar 15/04</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="p-8 bg-[url('../fundo02.PNG')] bg-repeat w-full overflow-hidden bg-center">
+
+    <div class="flex flex-row flex-wrap my-8 mx-8 justify-around gap-4 *:max-w-lg ">
+
+      <div class="bg-linear-to-tl from-[#2D4815] to-lime-950 border-gray-100 border-1 rounded-2xl p-6 mb-6 w-100 max-w-xs max-lg:w-80 max-sm:w-60 ring-6 ring-offset-4 ring-lime-950 ">
+
+        <h1 class="text-lime-300 text-2xl font-serif">Lua Nova</h1>
+
+        <h2 class="text-gray-100 text-xl leading-10 "><span class="text-5xl font-serif">23</span><br>Março 2026</h2>
+
+        <p class="text-lime-300 text-left my-4 text-balance">Melhor período para observação astronômica. O céu estará claro e as estrelas visíveis</p>
+
+        <button class="bg-lime-950 text-gray-100 py-2 px-4 rounded-full font-semibold hover:bg-gray-100 hover:text-lime-950 hover:cursor-pointer border-gray-300 border-1">Reservar 23/03</button>
+
+      </div >
+
+      <div class="bg-[#2D4815] border-gray-100 border-1 rounded-2xl p-6 mb-6 w-100 max-w-xs max-lg:w-80 max-sm:w-60">
+
+        <h1 class="text-lime-300 text-2xl font-serif">Aurora Boreal</h1>
+
+        <h2 class="text-gray-100 text-xl leading-10"><span class="text-5xl font-serif">15</span><br>Abril 2026</h2>
+
+        <p class="text-lime-300 text-left my-4 text-balance">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
+
+        <button class="bg-lime-950 text-gray-100 py-2 px-4 rounded-full font-semibold hover:bg-gray-100 hover:text-lime-950 hover:cursor-pointer">Reservar 15/04</button>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="m-8">
+    <h1 class="text-9xl text-balance font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-200 to-yellow-100">Tenho em mim todos os <span class="text-transparent bg-clip-text animated-background h-screen bg-gradient-to-br from-emerald-200 to-indigo-300">sonhos</span> do <span class="text-transparent bg-clip-text animated-background h-screen bg-gradient-to-br from-emerald-200 to-indigo-300">mundo</span></h1>
+  </section>
+
+  <hr>
+
+  <section class="flex">
+
+    <form action=""  class="my-20 mx-auto" >
+      <h1 class="text-xl font-bold mb-4">Preencha abaixo:</h1>
+      <input
+        class="border-2 border-gray-200 outline-gray-200 py-2 px-4 peer focus:outline-blue-600 rounded-4xl min-w-sm transition duration-300"
+        type="text"
+        placeholder="E-mail"
+      />
+      <p class="invisible pl-4 text-transparent text-sm italic mt-1 peer-focus:visible peer-focus:text-black transition duration-300">Use seu principal e-mail</p>
+    </form>
+  </section>
+
+  <hr>
+
+  <section class="flex justify-around my-20 ">
+    <fieldset class="mx-20 flex flex-row gap-4 flex-wrap">
+      <legend class="text-lg font-bold uppercase mb-4 m-auto">Escolha A Sua</legend>
+
+      <div class="my-2 m-auto">
+        <input type="radio" id="nimbus" name="produto" value="nimbus" class="mr-2 peer"/>
+        <label for="nimbus" class="bg-blue-100 py-3 px-3 rounded-lg font-semibold inline-grid grid-cols-[200px_auto] peer-checked:ring-blue-200 peer-checked:ring-2 peer-checked:bg-blue-200">Nimbus Stark <span class="font-bold">R$ 989,00</span></label>
+        <ul class="hidden peer-checked:block bg-blue-100 py-3 px-6 rounded-lg mt-4 ml-6 ring-2 ring-blue-200">
+          <li>Motor Elétrico</li>
+          <li>Fibra de Carbono</li>
+          <li>50 km/h</li>
+          <li>Rastreador</li>
+        </ul>
+      </div>
+    
+      <div class="my-2 m-auto">
+        <input type="radio" id="nimbus" name="produto" value="nimbus" class="mr-2 peer"/>
+        <label for="nimbus" class="bg-amber-100 py-3 px-3 rounded-lg font-semibold inline-grid grid-cols-[200px_auto] peer-checked:ring-amber-200 peer-checked:ring-2 peer-checked:bg-amber-200">Fire Cosmic <span class="font-bold">R$ 1.089,00</span></label>
+        <ul class="hidden peer-checked:block bg-amber-100 py-3 px-6 rounded-lg mt-4 ml-6 ring-2 ring-amber-200">
+          <li>Motor Elétrico</li>
+          <li>Fibra de Carbono</li>
+          <li>50 km/h</li>
+          <li>Rastreador</li>
+        </ul>
+      </div>
+
+      <div class="my-2 m-auto">
+        <input type="radio" id="nimbus" name="produto" value="nimbus" class="mr-2 peer"/>
+        <label for="nimbus" class="bg-lime-100 py-3 px-3 rounded-lg font-semibold inline-grid grid-cols-[200px_auto] peer-checked:ring-lime-200 peer-checked:ring-2 peer-checked:bg-lime-200">Magic Mountain <span class="font-bold">R$ 1.289,00</span></label>
+        <ul class="hidden peer-checked:block bg-lime-100 py-3 px-6 rounded-lg mt-4 ml-6 ring-2 ring-lime-200">
+          <li>Motor Elétrico</li>
+          <li>Fibra de Carbono</li>
+          <li>50 km/h</li>
+          <li>Rastreador</li>
+        </ul>
+      </div>
+
+    </fieldset>
+  </section>
+
+  <hr>
+
+  <section class="flex flex-wrap gap-10 my-20 mx-5 justify-around">
+
+    <div>
+      <input type="radio" name="cores" id="orange" value="orange" class="peer hidden">
+      <label for="orange" class="size-30 rounded-3xl bg-amber-400 flex justify-around items-center cursor-pointer border-2 font-bold uppercase text-white shadow-[10px_10px_0_0_#808080] border-black hover:bg-amber-500 peer-checked:bg-red-400 peer-checked:hover:bg-red-500 peer-checked:shadow-[10px_10px_0_0_black] transition">
+        Orange
+      </label>
+    </div>
+
+    <div>
+      <input type="radio" name="cores" id="blue" value="blue" class="peer hidden">
+      <label for="blue" class="size-30 rounded-3xl bg-blue-400 flex justify-around items-center cursor-pointer border-2 font-bold uppercase text-white shadow-[10px_10px_0_0_#808080] border-black hover:bg-blue-500 peer-checked:bg-red-400 peer-checked:hover:bg-red-500 peer-checked:shadow-[10px_10px_0_0_black] transition">
+        Blue
+      </label>
+    </div>
+
+    <div>
+      <input type="radio" name="cores" id="green" value="green" class="peer hidden">
+      <label for="green" class="size-30 rounded-3xl bg-green-500 flex justify-around items-center cursor-pointer border-2 font-bold uppercase text-white shadow-[10px_10px_0_0_#808080] border-black hover:bg-green-600 peer-checked:bg-red-400 peer-checked:hover:bg-red-500 peer-checked:shadow-[10px_10px_0_0_black] transition">
+        Green
+      </label>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="my-20 mx-5">
+    <table class="border-collapse w-full table-auto">
+      <thead>
+        <tr class="text-left *:p-2 *:border-2 *:border-gray-500 *:uppercase *:bg-blue-200">
+          <th>id</th>
+          <th>cliente</th>
+          <th>final cartão</th>
+          <th>data</th>
+        </tr>
+      </thead>
+      <tbody class="*:*:p-2 *:*:border-2 *:*:border-gray-500 *:odd:bg-gray-200">
+        <tr class="">
+          <td>321</td>
+          <td>Maria Santos</td>
+          <td>2233</td>
+          <td>13/12</td>
+        </tr>
+        <tr class="">
+          <td>322</td>
+          <td>Marta Mendes</td>
+          <td>3322</td>
+          <td>10/12</td>
+        </tr>
+        <tr class="">
+          <td>323</td>
+          <td>João Moreira</td>
+          <td>2232</td>
+          <td>22/11</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>   
