@@ -614,6 +614,15 @@
   .bg-\[url\(\'\.\.\/fundo02\.PNG\'\)\] {
     background-image: url('../fundo02.PNG');
   }
+  .bg-\[url\(\'\/fundo02\.png\'\)\] {
+    background-image: url('/fundo02.png');
+  }
+  .bg-\[url\(\'fundo02\.PNG\'\)\] {
+    background-image: url('fundo02.PNG');
+  }
+  .bg-\[url\(\'fundo02\.png\'\)\] {
+    background-image: url('fundo02.png');
+  }
   .from-\[\#2D4815\] {
     --tw-gradient-from: #2D4815;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
