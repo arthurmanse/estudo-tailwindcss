@@ -641,6 +641,12 @@
   .bg-\[url\(\'img\/fundo02\.png\'\)\] {
     background-image: url('img/fundo02.png');
   }
+  .bg-\[url\(\.\.\/img\/fundo02\.png\)\] {
+    background-image: url(../img/fundo02.png);
+  }
+  .bg-\[url\(\.\/img\/fundo02\.png\)\] {
+    background-image: url(./img/fundo02.png);
+  }
   .bg-\[url\(\/img\/fundo02\.png\)\] {
     background-image: url(/img/fundo02.png);
   }
